@@ -1,0 +1,15 @@
+<h1><%= @list.name %></h1>
+<br>
+
+
+<div class="card">
+  <h1><%= @movie.title %></h1>
+  <br>
+  <p>overview: <%= @movie.overview %></p>
+  <p>rating: <%= @movie.rating %></p>
+  <img src=<% "#{@movie.poster_url}" %> alt=<%= "#{@movie.title}" %>>
+</div>
+
+
+
+<%= link_to "Back", lists_path %>

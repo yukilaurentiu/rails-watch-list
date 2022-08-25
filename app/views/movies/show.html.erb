@@ -1,0 +1,10 @@
+<h1><%= @movie.tilte %></h1>
+<br>
+<p> <%= @movie.overview %></p>
+<p><%= @movie.rating %></p>
+<img src=<% "#{@movie.poster_url}" %> alt=<%"#{@movie.title}"%>>
+
+
+
+<%= link_to "Add list", list_path(@movie) %>
+<%= link_to "Back", lists_path %>
