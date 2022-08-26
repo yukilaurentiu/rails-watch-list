@@ -1,4 +1,7 @@
+<div>
+<%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
 <h1><%= @list.name %></h1>
+</div>
 <br>
 
 <% @bookmarks.each do |bookmark| %>
@@ -11,9 +14,9 @@
   <p>overview: <%= movie.overview %></p>
   <p>rating: <%= movie.rating %></p>
   <img src=<% "#{movie.poster_url}" %> alt=<%= "#{movie.title}" %>>
+  <p><%= @bookmark.comment %></p>
 </div>
 <% end %>
 
 
 <%= link_to "Add movie", new_list_bookmark_path(@list.id), class: "btn btn-success" %>
-
