@@ -1,6 +1,7 @@
-<%= simple_form_for [@list, @movie, @bookmark] do |f| %>
-  <%= f.input :name, collection: List.all %>
-  <%= f.submit "Add list", class: "btn btn-success" %>
+<%= simple_form_for [@list, @bookmark] do |f| %>
+  <%= f.input :comment %>
+   <%= f.association :movie %>
+  <%= f.submit "Add Bookmark", class: "btn btn-success" %>
 <% end %>
 
 <%= link_to "Back", lists_path %>

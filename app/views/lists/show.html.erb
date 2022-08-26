@@ -1,15 +1,19 @@
 <h1><%= @list.name %></h1>
 <br>
 
+<% @bookmarks.each do |bookmark| %>
 
+
+<% movie = bookmark.movie %>
 <div class="card">
-  <h1><%= @movie.title %></h1>
+  <h1><%= movie.title %></h1>
   <br>
-  <p>overview: <%= @movie.overview %></p>
-  <p>rating: <%= @movie.rating %></p>
-  <img src=<% "#{@movie.poster_url}" %> alt=<%= "#{@movie.title}" %>>
+  <p>overview: <%= movie.overview %></p>
+  <p>rating: <%= movie.rating %></p>
+  <img src=<% "#{movie.poster_url}" %> alt=<%= "#{movie.title}" %>>
 </div>
+<% end %>
 
 
+<%= link_to "Add movie", new_list_bookmark_path(@list.id), class: "btn btn-success" %>
 
-<%= link_to "Back", lists_path %>

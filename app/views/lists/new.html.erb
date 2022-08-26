@@ -1,0 +1,8 @@
+<%= simple_form_for @list do |f| %>
+ <%# <p>newhtml</p> %>
+  <%= f.input :name %>
+  <%= f.submit "Create", class: "btn btn-success" %>
+<% end %>
+
+<br>
+<%= link_to "Back", lists_path %>
